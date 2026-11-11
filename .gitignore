@@ -1,0 +1,5 @@
+.superpowers/
+.playwright-cli/
+# Archivos fuente del logo: no se publican
+Logo.jpeg
+logo-original.svg

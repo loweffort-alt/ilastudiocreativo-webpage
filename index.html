@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ila studio creativo · Muy pronto</title>
+  <meta name="description" content="ila studio creativo: eventos corporativos y sociales, regalos empresariales, catering, fotografía y video, merchandising, arreglos florales y endomarketing. Muy pronto.">
+  <meta name="theme-color" content="#681a32">
+  <meta property="og:title" content="ila studio creativo">
+  <meta property="og:description" content="Estamos preparando algo especial. Muy pronto.">
+  <meta property="og:image" content="logo.jpg">
+  <link rel="icon" href="logo.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --burdeo: #681a32; /* color exacto del fondo de logo.jpg */
+      --crema: #faede0;
+      --naranjo: #f59e51;
+      --logo: min(380px, 86vw);
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body { height: 100%; }
+
+    body {
+      margin: 0;
+      background: var(--burdeo);
+      color: var(--crema);
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    main {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 28px;
+      padding: 48px 16px 88px;
+      text-align: center;
+    }
+
+    /* La imagen trae mucho margen burdeo arriba y abajo; se recorta visualmente */
+    .logo {
+      display: block;
+      width: var(--logo);
+      height: auto;
+      margin: calc(var(--logo) * -0.24) 0;
+    }
+
+    .mensaje {
+      margin: 0;
+      font-size: 17px;
+      line-height: 1.6;
+      opacity: .9;
+    }
+
+    .acciones {
+      display: flex;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 26px;
+      border-radius: 999px;
+      font-size: 15px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: transform .2s ease, background-color .2s ease, color .2s ease;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+
+    .btn:focus-visible {
+      outline: 2px solid var(--crema);
+      outline-offset: 3px;
+    }
+
+    .btn-whatsapp {
+      background: var(--naranjo);
+      color: var(--burdeo);
+    }
+
+    .btn-correo {
+      border: 1px solid var(--crema);
+      color: var(--crema);
+    }
+
+    .btn-correo:hover {
+      background: var(--crema);
+      color: var(--burdeo);
+    }
+
+    footer {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 18px;
+      padding: 0 16px;
+      text-align: center;
+      font-size: 12px;
+      opacity: .6;
+    }
+
+    footer a { color: inherit; text-decoration: none; }
+
+    @media (max-width: 480px) {
+      .acciones {
+        flex-direction: column;
+        width: 100%;
+        max-width: 320px;
+      }
+
+      footer span { display: block; }
+      footer .sep { display: none; }
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      main > * { animation: aparecer .9s ease both; }
+      main > *:nth-child(2) { animation-delay: .15s; }
+      main > *:nth-child(3) { animation-delay: .3s; }
+    }
+
+    @keyframes aparecer {
+      from { opacity: 0; transform: translateY(8px); }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <img class="logo" src="logo.jpg" alt="ila studio creativo" width="750" height="750">
+    <p class="mensaje">Estamos preparando algo especial.<br>Muy pronto.</p>
+    <div class="acciones">
+      <a class="btn btn-whatsapp" href="https://wa.me/51964975331?text=Hola%2C%20vengo%20de%20su%20p%C3%A1gina%20web" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="btn btn-correo" href="mailto:corporativo@ilastudiocreativo.com">Correo</a>
+    </div>
+  </main>
+  <footer>
+    <span><a href="https://wa.me/51964975331" target="_blank" rel="noopener">+51 964 975 331</a></span>
+    <span class="sep"> · </span>
+    <span><a href="mailto:corporativo@ilastudiocreativo.com">corporativo@ilastudiocreativo.com</a></span>
+  </footer>
+</body>
+</html>
